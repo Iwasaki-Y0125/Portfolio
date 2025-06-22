@@ -174,21 +174,6 @@ function startPlay() {
   }, 1000);
 } // 1秒ごとに実行
 
-if (playTime <= 0) {
-  clearInterval(playInterval);
-  isPlaying = false;
-
-  // れんだ画面を非表示 → おわり画面を表示
-  document.getElementById("rendaPlay").classList.replace("screen", "hidden");
-  document.getElementById("rendaEnd").classList.replace("hidden", "screen");
-
-  // 1秒後に「おわり」画面を非表示 → 結果画面を表示
-  setTimeout(() => {
-    document.getElementById("rendaEnd").classList.replace("screen", "hidden");
-    document.getElementById("rendaResult").classList.replace("hidden", "screen");
-    showResult();
-  }, 1000); // 
-}
 
 // 4.結果画面
 function showResult() {
