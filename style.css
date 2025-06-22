@@ -2,6 +2,7 @@
 html {
   font-size: 100%; /* 通常16px相当 */
   margin: 0px; /* ブラウザのデフォルトマージンをリセット */
+      touch-action: manipulation;
 }
 
 /** フォント全体設定 */
