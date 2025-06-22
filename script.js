@@ -170,7 +170,7 @@ function startPlay() {
       document
         .getElementById("rendaResult")
         .classList.replace("hidden", "screen"); // 結果画面を表示
-    }
+   showResult()  }
   }, 1000);
 } // 1秒ごとに実行
 
