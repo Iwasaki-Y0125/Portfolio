@@ -1,0 +1,26 @@
+my-website/
+├── index.html
+│
+├── style.css
+│
+├── script.js
+│
+├── images/
+│   ├── top_light.GIF
+│   ├── top_dark.GIF
+│   ├── X_logo-black.png
+│   ├── X_logo-white.png
+│   ├── github-mark.png
+│   ├── github-mark-white.png
+│   ├── note_icon.png
+│   ├── icon_small.jpg
+│   ├── icon_big.GIF
+│   ├── A.GIF
+│   ├── B.GIF
+│   ├── C.GIF
+│   ├── D.GIF
+│   └── E.GIF
+│
+└── fonts/
+    ├── JF-Dot-k12x10.ttf
+    └── misaki_gothic_2nd.ttf
