@@ -212,7 +212,7 @@ function showResult() {
 
 document.getElementById("postToX").addEventListener("click", function () {
   const rankText = document.getElementById("rank").innerText;
-  const siteURL = "https://github.com/Iwasaki-Y0125/Portfolio.git";
+  const siteURL = "https://iwasaki-y0125.github.io/Portfolio/";
   const postText = `6秒連打で ${renda}連打しました！${rankText} #6秒連打 ${siteURL}`;
   const postUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(
     postText
