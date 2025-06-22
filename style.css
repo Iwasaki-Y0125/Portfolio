@@ -370,7 +370,7 @@ p {
   color: var(--lf);
 }
 
-.backToTop {
+.backToTop, .footer-text {
   display: block;
   text-align: center;
   margin: 2rem;
@@ -472,6 +472,11 @@ p {
 #rendaBtn:active {
   transform: translate(0, -2.5rem);
   box-shadow: 0 2px 0 #acabab;
+}
+
+#rendaEnd p{
+  font-size: clamp(2rem, 10vw, 6rem);
+  padding-left: 2rem;
 }
 
 #playTime,
