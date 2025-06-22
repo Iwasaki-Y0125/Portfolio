@@ -160,19 +160,23 @@ function startPlay() {
   playInterval = setInterval(() => {
     // setInterval(() => { ... }, 1000);　1秒ごとに、指定された関数を繰り返し実行する関数
     playTime--; // カウントダウンを1秒ずつ減らす
-    document.getElementById("playTime").innerText = `あと ${playTime} 秒`; // 表示を更新
+    document.getElementById("playTime").innerText = `あと ${playTime} 秒`;
     if (playTime <= 0) {
       clearInterval(playInterval); // カウントダウンが0になったら停止
       isPlaying = false; // ゲームが終了したことを示すフラグを更新
-      document
-        .getElementById("rendaPlay")
-        .classList.replace("screen", "hidden"); // 連打中画面を非表示
-      document
-        .getElementById("rendaResult")
-        .classList.replace("hidden", "screen"); // 結果画面を表示
-   showResult()  }
-  }, 1000);
-} // 1秒ごとに実行
+      document.getElementById("rendaPlay").classList.replace("screen", "hidden"); // 連打中画面を非表示
+      document.getElementById("rendaEnd").classList.replace("hidden", "screen"); // 終了画面を表示
+      setTimeout(() => {
+        document.getElementById("rendaEnd").classList.replace("screen", "hidden"); // 終了画面を非表示
+        document
+          .getElementById("rendaResult")
+          .classList.replace("hidden", "screen"); // 終了画面を表示
+        showResult();
+      }, 1000); // 1秒後に結果画面を表示
+    }
+  }, 1000)}; // 1秒ごとに実行
+
+
 
 
 // 4.結果画面
@@ -226,10 +230,11 @@ document.getElementById("retryBtn").addEventListener("click", function () {
   document.getElementById("rendaReady").classList.replace("hidden", "screen"); // 待機画面を表示
 
   isPlaying = true; // ゲームが再度プレイ中に設定
-  readyTime();
   document.getElementById("readyTime").innerText = "3"; // カウントダウン表示をリセット
 
   renda = 0; // 連打数をリセット
   document.getElementById("playTime").innerText = "あと 6 秒"; // 連打時間表示をリセット
   document.getElementById("playScore").innerText = `${renda}連打`; // 連打数表示をリセット
+
+  readyTime();
 });
