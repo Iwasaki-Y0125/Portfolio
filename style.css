@@ -416,7 +416,7 @@ p {
 }
 
 #rendatitle {
-  font-size: clamp(1.5rem, 12vw, 4rem);
+  font-size: clamp(1.5rem, 10vw, 4rem);
   /* clamp(最小値, 推奨値（可変）, 最大値) */
   font-family: "JF-Dot-k12x10", "游ゴシック", sans-serif;
   transform: translateY(-3rem);
