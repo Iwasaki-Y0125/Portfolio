@@ -187,7 +187,7 @@ h1 {
 
   width: 100%;
   max-width: 400px;
-  height: 190px; /*縦幅*/
+  height: 210px; /*縦幅*/
   margin: 8px;
 
   background-color: var(--nb); /*背景色 */
@@ -203,7 +203,7 @@ h1 {
 
   display: flex;
   flex-direction: column; /* 縦並びにする */
-  margin-left: -2.5rem;
+  margin-left: -4rem;
 }
 
 .disabledLink {
@@ -219,7 +219,7 @@ h1 {
   height: auto;
   display: flex;
   padding: 10px;
-  margin: 8px;
+  margin: -2px;
 }
 
 #iconX,
@@ -234,7 +234,6 @@ h1 {
   background-color: var(--nb); /*背景色 */
   border-radius: 50%; /* 枠線の丸み*/
   box-shadow: 0 5px 0 #acabab;
-  margin: 1rem;
   transition: all 0.3s;
 }
 
@@ -314,16 +313,26 @@ h1 {
   padding: 1rem;
 }
 
-.purpose-article {
+.purpose_article {
   background-color: var(--nb);
   border-radius: 10px;
   border: 10px solid var(--nb);
+}
+
+.portfolio_article {
+  background-color: var(--nb);
+  border-radius: 10px;
+  border: 10px solid var(--nb);
+  padding: 1rem;
 }
 
 /**　文字の設定 */
 /* リンク文字 */
 a {
   color: var(--a);
+  margin: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.9;
 }
 a:visited {
   color: var(--av);
@@ -358,7 +367,7 @@ nav p {
 }
 
 /* 通常の文字 */
-p {
+p   {
   font-family: "JF-Dot-k12x10", "游ゴシック", sans-serif;
   margin: 1rem;
   font-size: clamp(0.9rem, 2vw, 1rem);
@@ -376,6 +385,21 @@ p {
   margin: 2rem;
   padding: 2rem;
 }
+
+.OGP{
+  display: block;
+  text-align: center;
+}
+
+.OGP_img {
+  width: 90%;
+  max-width: 350px;
+}
+
+.OGP_img:hover {
+  transform: translateY(-8px);
+}
+
 /*スマホのみ改行 */
 .br-sp {
   display: none;
